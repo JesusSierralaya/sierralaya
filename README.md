@@ -1,2 +1,2 @@
-# sierralaya.github.io
+# sierralaya
 Personal website 
