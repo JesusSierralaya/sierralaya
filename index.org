@@ -2,3 +2,12 @@
 #+author: Jesus Sierralaya
 
 Hello world!
+
+* About me
+Welcome to my /personal space/ on the *web*!
+* Portfolio
+** Virtual Reality Project
+Some ~code~
+** Artificial Intelligence Applications
+_Under construction_
+* Contact
