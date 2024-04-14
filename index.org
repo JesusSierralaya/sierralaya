@@ -1,3 +1,4 @@
-#+title:         Personal web-site
+#+title: Personal web-site
+#+author: Jesus Sierralaya
 
 Hello world!
