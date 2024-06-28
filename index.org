@@ -2,8 +2,6 @@
 #+subtitle: Personal Website
 #+author: Jesus Sierralaya
 
-Hello world!
-
 * About me
 Welcome to my /personal space/ on the *web*!
 * Portfolio
