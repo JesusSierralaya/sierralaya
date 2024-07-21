@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="imccalculator.js"></script>
+    <title>IMC calculator</title>
 </head>
+
 <body>
-   Test 
+    <h3>Use of 'prompt' and 'creating modular functions'</h3>
+    <a href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_solutions/concepts_3">Repo</a>
+    <hr>
+    <button onclick="calculateImc()">Calculate IMC</button>
+    <div id="name"></div>
+    <div id="height"></div>
+    <div id="weight"></div>
+    <div id="imc"></div>
+    <hr>
+    <p>Main js lines/commands used:</p>
+    <code>
+        let name = prompt('Enter your name')
+        <br>
+        document.querySelector('#name').innerHTML = name;
+    </code>
 </body>
+
 </html>
+
+<script>
+    function calculateImc() {
+        let name = prompt('Enter your name');
+        document.querySelector('#name').innerHTML = name;
+
+        let height = prompt('Enter your height');
+        document.querySelector('#height').innerHTML = height;
+
+        let weight = prompt('Enter your weight');
+        document.querySelector('#weight').innerHTML = weight;
+
+        let imc = imcCalculator(weight, height);
+        imc = `The IMC is ${imc}`;
+        document.querySelector('#imc').innerHTML = imc;
+    }
+</script>
