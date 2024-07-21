@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://raw.githubusercontent.com/JesusSierralaya/sierralaya/main/js_solutions/concepts_3/imccalculator.js"></script>
-    <title>Input and Internet Source</title>
+    <script
+        src="https://cdn.jsdelivr.net/gh/JesusSierralaya/sierralaya/js_solutions/concepts_3/imccalculator.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Input, External Functions and CSS intro</title>
 </head>
+
 <body>
-   test 
+    <h3>Utilizing Input Labels, External JavaScript Functions and Introductory CSS</h3>
+    <a href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_solutions/concepts_4">Repo</a>
+    <hr>
+    <div id="main">
+        <input type="text" id="iName" placeholder="name" value="Jesus">
+        <input type="number" name="" id="iWeight" placeholder="weight" value="80">
+        <input type="number" id="iHeight" placeholder="height" value="170">
+        <br>
+        <button onclick="calculateImc()">Calculate IMC</button>
+        <div id="result">IMC result</div>
+    </div>
+    <hr>
+    <p>Main js lines/commands used:</p>
+    <code>
+        let weight = document.querySelector('#iWeight').value
+        <br>
+        document.querySelector('#result').innerHTML = imc
+    </code>
+    <br>
+    <a href="../">Back to Solutions</a>
 </body>
+
 </html>
 
 <script>
-    let weight = 80;
-    let height = 170;
-    let imc = imcCalculator(weight, height);
-    console.log(imc);
+    function calculateImc() {
+        let weight = document.querySelector('#iWeight').value
+        let height = document.querySelector('#iHeight').value
+        let imc = imcCalculator(weight, height);
+        document.querySelector('#result').innerHTML = imc
+    }
 </script>
