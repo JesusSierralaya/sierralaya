@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concepts 2</title>
 </head>
+
 <body>
     <h3>
         Messages to the console and measuring the time
     </h3>
+    <button onclick="startMessages()">Start Messages</button>
+    <hr>
     <a href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_solutions/concepts_2">Repo</a>
 </body>
+
 </html>
 <script>
-    alert('Press F12 and watch the console output')
-    console.time(); //start the timer
+    function startMessages() {
+        alert('Press F12 and watch the console output')
+        console.time(); //start the timer
 
-    let name = prompt('Enter your name')
+        let name = prompt('Enter your name')
 
-    console.info(`Hi ${name} this is an info message.`)
-    console.warn(`Hi ${name} this is an warning message.`)
-    console.error(`Hi ${name} this is an error message.`)
+        console.info(`Hi ${name} this is an info message.`)
+        console.warn(`Hi ${name} this is an warning message.`)
+        console.error(`Hi ${name} this is an error message.`)
 
-    let answer = confirm('Do you want to finish the test?')
-    console.log(answer);
-    console.timeEnd(); //finish the timer
+        let answer = confirm('Do you want to finish the test?')
+        console.log(answer);
+        console.timeEnd(); //finish the timer
+    }
 </script>
