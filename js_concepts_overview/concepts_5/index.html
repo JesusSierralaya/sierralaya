@@ -28,6 +28,21 @@
     </div>
     <br />
     <hr />
+    <p>Main js lines/commands used:</p>
+    <pre>
+    <code>
+        console.log(email.indexOf("@") < 0); // false
+        <br>
+        console.log(password.toUpperCase().includes("A")); // false
+        <br>
+        console.log(/[Ii][Bb][Mm]/.test(password)); // false
+        <br>
+        // avoid repetition
+        function writeError(message, identifier) {
+          document.querySelector(identifier).innerHTML = message;
+        }
+    </code>
+    </pre>
     <a href="../">Back to Concepts Overview</a>
   </body>
 </html>
@@ -49,7 +64,7 @@
     if (email.indexOf("@") < 0) {
       writeError("The email must contain an @", "#error-email");
     } else if (email.indexOf(".") < 0) {
-      writeError("The email must contain an point", "#error-email");
+      writeError("The email must contain a point", "#error-email");
     } else if (email.length < 5) {
       writeError(
         "The email must contain at least 5 characters",
