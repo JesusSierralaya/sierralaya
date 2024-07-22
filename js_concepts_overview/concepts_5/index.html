@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concepts Overview 5</title>
+  </head>
+  <body>
     <h1>Concepts Overview 5</h1>
-    <br>
+    <h3>Testing conditions in 'if else' loops</h3>
+    <a
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_5"
+      >Repo</a
+    >
+    <hr />
+    <div class="container">
+      <input
+        type="text"
+        id="email"
+        placeholder="Email"
+        value="jesus@email.com"
+      />
+      <span class="error" id="error-email"></span>
+      <input type="text" id="pwd" placeholder="password" value="IBMa" />
+      <span class="error" id="error-pwd"></span>
+      <br />
+      <button onclick="validate()">Validate</button>
+    </div>
+    <br />
+    <hr />
     <a href="../">Back to Concepts Overview</a>
-</body>
+  </body>
 </html>
+<script>
+  function validate() {
+    let email = document.querySelector("#email").value;
+    let password = document.querySelector("#pwd").value;
+    // testing email
+    console.log("email");
+    console.log(email.indexOf("@") < 0); // false
+    console.log(email.indexOf(".") < 0); // false
+    console.log(email.length < 5); // false
+    // testing password
+    console.log("password");
+    console.log(password.toUpperCase().includes("A")); // false
+    console.log(password.length < 6); // false
+    console.log(/[Ii][Bb][Mm]/.test(password)); // false
+    // loop email
+    if (email.indexOf("@") < 0) {
+      writeError("The email must contain an @", "#error-email");
+    } else if (email.indexOf(".") < 0) {
+      writeError("The email must contain an point", "#error-email");
+    } else if (email.length < 5) {
+      writeError(
+        "The email must contain at least 5 characters",
+        "#error-email"
+      );
+    } else {
+      writeError("", "#error-email");
+    }
+    // loop password
+    if (password.toUpperCase().includes("A")) {
+      writeError("The pasword can't cotain the letter a", "#error-pwd");
+    } else if (password.length < 6) {
+      writeError(
+        "The pasword must contain at least 6 characters",
+        "#error-pwd"
+      );
+    } else if (/[Ii][Bb][Mm]/.test(password)) {
+      writeError("The pasword can't contain the word IBM", "#error-pwd");
+    } else {
+      writeError("", "#error-pwd");
+    }
+  }
+
+  // avoid repetition
+  function writeError(message, identifier) {
+    document.querySelector(identifier).innerHTML = message;
+  }
+</script>
