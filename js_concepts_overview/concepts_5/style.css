@@ -1,0 +1,41 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: wheat;
+}
+
+.container {
+    display: grid;
+    background-color: aliceblue;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border-radius: 8px;
+    max-width: 250px;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: large;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 2s ease;
+    border-radius: 30px;
+}
+
+button:hover {
+    background-color: aquamarine;
+}
+
+.error {
+    color: red;
+    font-family: 'verdana';
+}
