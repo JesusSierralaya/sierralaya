@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <title>Concepts Overview 8</title>
+  </head>
+  <body>
+    <h1>Concepts Overview 8</h1>
+    <h2>Tasks</h2>
+    <div id="task">Change image size</div>
+    <a
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_8"
+      target="_blank"
+      >Repo</a
+    >
+    <hr />
+    <!-- code that will be run -->
+    <div>
+      <button id="buttonMore" onclick="increase()">+</button>
+      <button id="buttonLess">-</button>
+    </div>
+    <div>
+      <div class="cover"><img src="covers/crash_car.jpg" alt="" /></div>
+      <div class="cover"><img src="covers/pepsiman.jpg" alt="" /></div>
+      <div class="cover"><img src="covers/metal_slug_x.jpg" alt="" /></div>
+      <div class="cover"><img src="covers/marvel_vs_capcom.jpg" alt="" /></div>
+      <div class="cover"><img src="covers/tekken3.jpg" alt="" /></div>
+    </div>
+    <hr />
+    <div>
+      <p>Main js lines/commands used:</p>
+      <pre>
+        <code class="language-javascript">
+            let wide = 300;
+            function increase() {
+            wide++;
+            // selects all elements with the class name cover and stores in var covers
+            let covers = document.getElementsByClassName("cover");
+            // Array.from(covers) converts the elements into a regular array
+            // so forEach can be used
+            // forEach for each element the function inside is executed
+            Array.from(covers).forEach((cover) => {
+                // for each cover element sets the style property to the value 
+                cover.style.width = `${wide}px`;
+            });
+            }
+
+            document.querySelector("#buttonLess").addEventListener("click", function () {
+            wide--;
+            let covers = document.querySelectorAll(".cover");
+            Array.from(covers).forEach((cover) => {
+                cover.style.width = `${wide}px`;
+            });
+            });
+        </code>
+      </pre>
+    </div>
+    <hr />
+    <a href="../">Back to Concepts Overview</a>
+  </body>
+</html>
+<script src="changeSize.js"></script>
