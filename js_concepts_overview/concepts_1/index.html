@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Concepts 1</title>
     <script src="writer.js"></script>
-</head>
+  </head>
 
-<body>
-    <h3>Use of 'querySelector' and 'innerHTML' to add text from js blocks and files</h3>
+  <body>
+    <h3>
+      Use of 'querySelector' and 'innerHTML' to add text from js blocks and
+      files
+    </h3>
     <p>Note: press F12 to see the code</p>
     <p>
-        You can see the complete code also in
-        <a href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_solutions/concepts_1">
-            the repository.
-        </a>
+      You can see the complete code also in
+      <a
+        href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_1"
+        target="_blank"
+        >Repo</a
+      >
     </p>
-    <hr> <!-- add an horizontal line -->
+    <hr />
+    <!-- add an horizontal line -->
     <p id="p1"></p>
     <div id="div2"></div>
-    <hr>
+    <hr />
     <p>Main js lines/commands used:</p>
     <pre>
     <code>
         document.querySelector('#p1').innerHTML = 'test'
     </code>
     </pre>
-    <br>
+    <br />
     <a href="../">Back to Concepts Overview</a>
-</body>
-
+  </body>
 </html>
 <script>
-    let test = 'Written text from script';
-    document.querySelector('#p1').innerHTML = test
-    writer()
+  let test = "Written text from script";
+  document.querySelector("#p1").innerHTML = test;
+  writer();
 </script>
