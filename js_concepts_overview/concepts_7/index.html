@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <title>Concepts Overview 7</title>
+  </head>
+  <body>
+    <h1>Concepts Overview 7</h1>
+    <h2>Tasks</h2>
+    <div id="task">Create sensors</div>
+    <a
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_7"
+      target="_blank"
+      >Repo</a
+    >
+    <hr />
+    <h2>Sensors</h2>
+    <div id="mark1" class="square"></div>
+    <div id="mark2" class="square"></div>
+
+    <p>The values must be greater than 10:</p>
+    <input type="number" id="sensor1" value="9" />
+    <input type="number" id="sensor2" value="8" />
+
+    <button onclick="checkSensor()">Check</button>
+    <hr />
+    <p>Main js lines/commands used:</p>
+    <pre>
+    <code class="language-javascript">
+      function checkSensor() {
+        console.log("heello");
+      //   console.log(checkSensor1(), checkSensor2());
+        if (checkSensor1() & checkSensor2()) {
+          alert('OK')
+        } else {
+          alert('ERROR')
+        }
+      }
+
+      function checkSensor1() {
+        let sensor1Value = document.querySelector("#sensor1").value;
+        let sensorOK;
+        if (sensor1Value < 10) {
+          sensorOK = false;
+          document.querySelector("#mark1").classList.remove("green");
+          document.querySelector("#mark1").classList.add("red");
+        } else {
+          sensorOK = true;
+          document.querySelector("#mark1").classList.remove("red");
+          // document.querySelector('#mark1').style.backgroundColor = "orange"
+          document.querySelector("#mark1").classList.add("green");
+        }
+        return sensorOK;
+      }
+
+      function checkSensor2() {
+        let sensor2Value = document.querySelector("#sensor2").value;
+        let sensorOK;
+        if (sensor2Value < 10) {
+          sensorOK = false;
+          document.querySelector("#mark2").classList.remove("green");
+          document.querySelector("#mark2").classList.add("red");
+        } else {
+          sensorOK = true;
+          document.querySelector("#mark2").classList.remove("red");
+          document.querySelector("#mark2").classList.add("green");
+        }
+        return sensorOK;
+      }
+
+    </code>
+    </pre>
+    <hr />
+    <a href="../">Back to Concepts Overview</a>
+  </body>
+</html>
+<script src="checker.js"></script>

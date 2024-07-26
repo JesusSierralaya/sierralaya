@@ -1,0 +1,15 @@
+.square {
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
