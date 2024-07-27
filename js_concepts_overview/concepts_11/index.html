@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <title>Concepts Overview 11</title>
+  </head>
+  <body>
+    <h1>Concepts Overview 11</h1>
+    <a
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_10"
+      target="_blank"
+      >Repo</a
+    >
+
+    <hr />
+    <!-- code that will be run -->
+    <div id="form">
+      <input type="text" id="iDestination" placeholder="Country destination" />
+      <input type="text" id="iName" placeholder="Name trip" />
+      <input type="text" id="iPhoto" placeholder="Destination URL" />
+      <button id="bAdd">Add</button>
+    </div>
+    <div id="div-save">
+      <button id="bSave">Save</button>
+    </div>
+    <div id="destinations"></div>
+    <hr />
+
+    <div>
+      <h3>Travel Manager</h3>
+      <pre>
+        <code id="code-block-1" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <hr />
+    <a href="../">Back to Concepts Overview</a>
+  </body>
+</html>
+<script src="functions.js"></script>
+<script>
+  async function loadCode(file, elementId) {
+    const response = await fetch(file);
+    const code = await response.text();
+    document.getElementById(elementId).textContent = code;
+    Prism.highlightAll();
+  }
+
+  loadCode("functions.js", "code-block-1");
+</script>
