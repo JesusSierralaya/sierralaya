@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <title>Concepts Overview 9</title>
+  </head>
+  <body>
+    <h1>Concepts Overview 9</h1>
+    <a
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_9"
+      target="_blank"
+      >Repo</a
+    >
+    <hr />
+    <!-- code that will be run -->
+    <div></div>
+    <hr />
+
+    <div>
+      <p>Main js lines/commands used:</p>
+      <h3>Example of a Class and sorting by a condition</h3>
+      <pre>
+        <code id="code-block-1" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h3>Array iterations and methods</h3>
+      <pre>
+        <code id="code-block-2" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h3>Reduce method</h3>
+      <pre>
+        <code id="code-block-3" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h3>Join method</h3>
+      <pre>
+        <code id="code-block-4" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <hr />
+    <a href="../">Back to Concepts Overview</a>
+  </body>
+</html>
+<script src="vehicles.js"></script>
+<script src="days_names.js"></script>
+<script src="reduce.js"></script>
+<script src="join_tostring.js"></script>
+<script>
+  async function loadCode(file, elementId) {
+    const response = await fetch(file);
+    const code = await response.text();
+    document.getElementById(elementId).textContent = code;
+    Prism.highlightAll();
+  }
+
+  loadCode("vehicles.js", "code-block-1");
+  loadCode("days_names.js", "code-block-2");
+  loadCode("reduce.js", "code-block-3");
+  loadCode("join_tostring.js", "code-block-4");
+</script>
