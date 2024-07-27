@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <title>Concepts Overview 10</title>
+  </head>
+  <body>
+    <h1>Concepts Overview 10</h1>
+    <a
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_10"
+      target="_blank"
+      >Repo</a
+    >
+    <hr />
+    <!-- code that will be run -->
+    <button onclick="startTasks()">Press to run the code</button>
+    <div id="run">
+    </div>
+    <hr />
+
+    <div>
+      <p>Main js lines/commands used:</p>
+      <h3>Example of a Class and sorting by a condition</h3>
+      <pre>
+        <code id="code-block-1" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <hr />
+    <a href="../">Back to Concepts Overview</a>
+  </body>
+</html>
+<script src="pushpop.js"></script>
+<script>
+  async function loadCode(file, elementId) {
+    const response = await fetch(file);
+    const code = await response.text();
+    document.getElementById(elementId).textContent = code;
+    Prism.highlightAll();
+  }
+
+  loadCode("pushpop.js", "code-block-1");
+</script>
