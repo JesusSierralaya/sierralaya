@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <title>Concepts Overview 15</title>
+  </head>
+  <body>
+    <h1>Concepts Overview 15: DOM handle</h1>
+    <a
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_15"
+      target="_blank"
+      >Repo</a
+    >
+
+    <hr />
+    <!-- code that will be run -->
+    <div id="newbody"></div>
+
+    <div>
+      <span id="message">Enter name:</span>
+      <input type="text" id="name" placeholder="Name" value="Jesus">
+      <p>Lorem ipsum dolor sit amet <span class="red">consectetur</span> adipisicing elit. Quas, obcaecati suscipit neque labore ea exercitationem amet at provident, molestias fugiat, corrupti aspernatur et magnam. Amet molestiae consequuntur totam illo reiciendis!</p>
+    </div>
+    <hr />
+
+    <div>
+      <h3>Creation DOM with appendChild</h3>
+      <pre>
+        <code id="code-block-1" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <div>
+      <h3>Change DOM with classList</h3>
+      <pre>
+        <code id="code-block-2" class="language-javascript">
+        </code>
+      </pre>
+    </div>
+
+    <hr />
+    <a href="../">Back to Concepts Overview</a>
+  </body>
+</html>
+
+<script src="creation.js"></script>
+<script src="creation2.js"></script>
+
+<script>
+  async function loadCode(file, elementId) {
+    const response = await fetch(file);
+    const code = await response.text();
+    document.getElementById(elementId).textContent = code;
+    Prism.highlightAll();
+  }
+
+  loadCode("creation.js", "code-block-1");
+  loadCode("creation2.js", "code-block-2");
+</script>
