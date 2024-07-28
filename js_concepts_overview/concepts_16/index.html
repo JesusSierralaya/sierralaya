@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LOL champions</title>
+  </head>
+  <body>
+    <h1>LOL Champions</h1>
+    <a id="repo"
+      href="https://github.com/JesusSierralaya/sierralaya/tree/main/js_concepts_overview/concepts_16"
+      target="_blank"
+      >Repo</a
+    >
+    <div class="filter">
+      <input type="text" id="iFilter" placeholder="Filter by name" />
+    </div>
+    <div id="champions">
+      <!-- <div class="champion">
+        <div class="image">
+          <img src="./images/Aatrox.png" />
+        </div>
+        <div class="description">
+          <div class="name">Aatrox</div>
+          <div class="title">the Darkin Blade</div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/createrow.js"></script>
+<script src="./scripts/http-client.js"></script>
+<script>
+  //   createRow("./images/Aatrox.png", "Aatrox", "the Darkin Blade...");
+  //   createRow("./images/Ahri.png", "Ahri", "the Nine-Tailed Fox...");
+
+  var arrayChampions;
+
+  doGetHTTPRequest(
+    "https://raw.githubusercontent.com",
+    "443",
+    "ngryman/lol-champions/master/champions.json",
+    processChampions,
+    handleError
+  );
+
+  function processChampions(data) {
+    arrayChampions = data;
+    arrayChampions.forEach((champion) => {
+      createRow(
+        champion.icon,
+        champion.name,
+        champion.title,
+        champion.key,
+        champion.tags
+      );
+    });
+  }
+
+  function handleError(error) {
+    console.error("Error:", error);
+  }
+
+  // champion filter
+
+  document.querySelector("#iFilter").addEventListener("keyup", () => {
+    let text = document.querySelector("#iFilter").value.toLowerCase();
+    // console.log('text: ' + text);
+
+    let filteredChampions = arrayChampions.filter((champion) => {
+      return champion.name.toLowerCase().startsWith(text);
+    });
+    // console.log('filteredChampions: ' + filteredChampions);
+
+    document.querySelector("#champions").innerHTML = "";
+    filteredChampions.forEach((champion) => {
+      createRow(
+        champion.icon,
+        champion.name,
+        champion.title,
+        champion.key,
+        champion.tags
+      );
+    });
+  });
+</script>

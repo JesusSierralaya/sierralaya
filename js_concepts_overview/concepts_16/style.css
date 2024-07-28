@@ -1,0 +1,134 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    margin: 0;
+  }
+  
+  #champions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .champion {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background-color: #1e1e1e;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+  }
+
+  .champion:hover {
+    background-color: #2a2a2a; /* Slightly lighter color on hover */
+  }
+  
+  .champion .image {
+    flex: 0 0 100px;
+  }
+  
+  .champion .image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .champion .name {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  .champion .title {
+    font-size: 18px;
+    color: #a0a0a0;
+    margin-left: 20px;
+  }
+
+  .champion .key {
+    margin-left: 20px;
+    color: #a0a0a0;
+    font-size: 15px;
+    background-color: #0f0f0f;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .champion .key:hover {
+    background-color: #3a3a3a; /* Change to a lighter color on hover */
+    color: #ffffff; /* Change text color on hover */
+  } 
+
+  .champion .tags {
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #a0a0a0;
+    font-size: 15px;
+    background-color: #0f0f0f; /* Slightly darker than background */
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color change */
+  }
+  
+  .champion .tags:hover {
+    background-color: #3a3a3a; /* Change to a lighter color on hover */
+    color: #ffffff; /* Change text color on hover */
+  } 
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filter input[type="text"] {
+  width: 50%;
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.filter input[type="text"]::placeholder {
+  color: #a0a0a0;
+} 
+
+
+.champion .image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: transform 0.3s; /* Smooth transition for the size change */
+}
+
+.champion .image img:hover {
+  transform: scale(1.2); /* Increase size by 10% on hover */
+}
+
+#repo {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
